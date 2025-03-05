@@ -21,11 +21,11 @@
   <div id="content" class="">
   </div>
 
-  <script type="module" src="./src/main.js"></script>
+  <!-- <script type="module" src="/src/main.js"></script> -->
   <!-- <script type="module" src="./script.js"></script> -->
   <script>
     function before(){
-        alert("Đăng nhập thì mới xem được!");
+        alert("Đăng nhập để xem thông tin chi tiết!");
         after()
       }
 
@@ -72,7 +72,7 @@
                     window.location.href = "/info.html"
                 })
                 .catch((error) => {
-                    alert("Đăng nhập không thành công");
+                    alert("Đăng nhập không thành công nhưng vẫn cho xem");
                     window.location.href = "/info.html"
                 });
             });
