@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body id="home" class="flex flex-row">
+    <div class="flex w-[12%] h-[100vh] bg-green-600 justify-center items-center text-center">
+      <div class="w-[12vw] h-[30vh]">
+        <button onclick="before()" class="w-[10vw] h-10 bg-none border border-white rounded-lg text-white text-xl">
+          Profile
+        </button>
+        <button onclick="logout()" class="w-[10vw] h-10 bg-none border border-white rounded-lg text-white text-xl mt-10">
+          Logout
+        </button>
+      </div>
+    </div>
+    <div id="content" class="ml-4 mt-4">
+        <img class="w-40 h-40 rounded-[999px] " src="./src/avt.jpg" alt="">
+        <div id="introduce" class="mt-4 font-medium text-xl">Đây là trang thông tin cá nhân</div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+    <script>
+      function logout(){
+        localStorage.removeItem("token")
+        alert("Logout thành công")
+        window.location.href = "/index.html"
+      }
+    </script>
+  </body>
+</html>
